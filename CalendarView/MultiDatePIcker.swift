@@ -1,12 +1,13 @@
 import SwiftUI
 
+import SwiftUI
+
 struct CalendarView: View {
     @Binding var selectedDates: Set<Date>
     @State private var currentMonth: Date = Date()
     @State private var isExpanded: Bool = false
     @State private var currentWeekStart: Date = Date()
     @State private var dragOffset: CGFloat = 0
-    @State private var isAnimating: Bool = false
     
     private let calendar = Calendar.current
     private let dateFormatter: DateFormatter = {
@@ -26,23 +27,14 @@ struct CalendarView: View {
         }
     }
     
-    private var datesOfMonth: [Date] {
+    private var datesOfMonth: [Date?] {
         let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: currentMonth))!
         let range = calendar.range(of: .day, in: .month, for: startOfMonth)!
-        let startDay = calendar.component(.weekday, from: startOfMonth)
         let daysInMonth = range.count
-        let daysBefore = (startDay - calendar.firstWeekday + 7) % 7
-        let totalDays = daysBefore + daysInMonth
-        let rows = (totalDays + 6) / 7 // Number of rows needed
+        let startDayOfWeek = calendar.component(.weekday, from: startOfMonth)
+        let daysBefore = (startDayOfWeek - calendar.firstWeekday + 7) % 7
         
-        var days: [Date] = []
-        
-        // Add days from the previous month
-        for i in 0..<daysBefore {
-            if let date = calendar.date(byAdding: .day, value: -daysBefore + i + 1, to: startOfMonth) {
-                days.append(date)
-            }
-        }
+        var days: [Date?] = Array(repeating: nil, count: daysBefore) // Empty spaces for days from previous month
         
         // Add days of the current month
         for day in 1...daysInMonth {
@@ -51,20 +43,17 @@ struct CalendarView: View {
             }
         }
         
-        // Add days from the next month
-        let remainingDays = rows * 7 - totalDays
-        for i in 0..<remainingDays {
-            if let date = calendar.date(byAdding: .day, value: i + 1, to: startOfMonth.addingTimeInterval(TimeInterval(daysInMonth * 86400))) {
-                days.append(date)
-            }
-        }
-        
         return days
+    }
+    
+    private var monthFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM yyyy"
+        return formatter
     }
     
     var body: some View {
         VStack(spacing: 0) {
-            // Month and Year button in the top-left with arrow buttons on the right
             HStack {
                 Button(action: { isExpanded.toggle() }) {
                     Text("\(currentMonth, formatter: monthFormatter)")
@@ -85,32 +74,33 @@ struct CalendarView: View {
                 .padding()
             }
             
-            // Weekday headers (displayed only in full month view)
-            //if isExpanded {
+            if isExpanded {
+                // Full month view
                 HStack {
                     ForEach(daysOfWeek, id: \.self) { day in
                         Text(day)
                             .frame(maxWidth: .infinity)
                             .font(.subheadline)
+                            .padding(.horizontal, 2)
                     }
                 }
                 .padding(.horizontal, 10)
-            //}
-            
-            // Display either the full month or a single week based on isExpanded state
-            if isExpanded {
-                // Full month view
+                
                 let columns = [GridItem(.adaptive(minimum: 40))]
                 LazyVGrid(columns: columns, spacing: 10) {
-                    ForEach(datesOfMonth, id: \.self) { date in
+                    ForEach(datesOfMonth.indices, id: \.self) { index in
+                        let date = datesOfMonth[index]
                         Button(action: {
-                            toggleDate(date)
+                            if let date = date {
+                                toggleDate(date)
+                            }
                         }) {
-                            Text("\(calendar.component(.day, from: date))")
+                            Text(date.map { "\(calendar.component(.day, from: $0))" } ?? "")
                                 .frame(width: 40, height: 40)
-                                .background(selectedDates.contains(date) ? Color.blue : Color.clear)
-                                .foregroundColor(currentDate(date) ? Color.blue : (selectedDates.contains(date) ? Color.white : Color.black))
+                                .background(date.map { selectedDates.contains($0) ? Color.blue : Color.clear } ?? Color.clear)
+                                .foregroundColor(date.map { currentDate($0) ? Color.blue : (selectedDates.contains($0) ? Color.white : Color.black) } ?? Color.black)
                                 .clipShape(Circle())
+                                .opacity(date == nil ? 0.0 : 1.0) // Hide empty spaces
                         }
                     }
                 }
@@ -123,7 +113,6 @@ struct CalendarView: View {
                             toggleDate(date)
                         }) {
                             VStack {
-                                //Text(daysOfWeek[calendar.component(.weekday, from: date) - 1])
                                 Text("\(calendar.component(.day, from: date))")
                             }
                             .frame(width: 40, height: 40)
@@ -154,8 +143,8 @@ struct CalendarView: View {
                 )
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top) // Sticking to the top
-        .background(Color.white) // Optional: Add a background color if needed
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        .background(Color.white)
         .onAppear {
             updateDisplayedDates()
         }
@@ -188,13 +177,8 @@ struct CalendarView: View {
     private func updateDisplayedDates() {
         // Optionally, update any state or perform actions when dates are updated
     }
-    
-    private let monthFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM yyyy"
-        return formatter
-    }()
 }
+
 
 struct ContentView: View {
     @State private var selectedDates = Set<Date>()

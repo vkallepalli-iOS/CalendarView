@@ -14,6 +14,10 @@
 		F3BBBFB42C651E060073B6DF /* CalendarViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BBBFB32C651E060073B6DF /* CalendarViewTests.swift */; };
 		F3BBBFBE2C651E060073B6DF /* CalendarViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BBBFBD2C651E060073B6DF /* CalendarViewUITests.swift */; };
 		F3BBBFC02C651E060073B6DF /* CalendarViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BBBFBF2C651E060073B6DF /* CalendarViewUITestsLaunchTests.swift */; };
+		F3BBBFCF2C6A9A980073B6DF /* DateWithRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BBBFCE2C6A9A980073B6DF /* DateWithRange.swift */; };
+		F3BBBFD12C6A9EF40073B6DF /* CombinedCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BBBFD02C6A9EF40073B6DF /* CombinedCalendarView.swift */; };
+		F3BBBFD32C6BB54D0073B6DF /* OneCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BBBFD22C6BB54D0073B6DF /* OneCalendarView.swift */; };
+		F3BBBFD92C6FEAFE0073B6DF /* MultiDatePIcker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BBBFD82C6FEAFE0073B6DF /* MultiDatePIcker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		F3BBBFB92C651E060073B6DF /* CalendarViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalendarViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BBBFBD2C651E060073B6DF /* CalendarViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewUITests.swift; sourceTree = "<group>"; };
 		F3BBBFBF2C651E060073B6DF /* CalendarViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F3BBBFCE2C6A9A980073B6DF /* DateWithRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateWithRange.swift; sourceTree = "<group>"; };
+		F3BBBFD02C6A9EF40073B6DF /* CombinedCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedCalendarView.swift; sourceTree = "<group>"; };
+		F3BBBFD22C6BB54D0073B6DF /* OneCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCalendarView.swift; sourceTree = "<group>"; };
+		F3BBBFD82C6FEAFE0073B6DF /* MultiDatePIcker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDatePIcker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +104,12 @@
 			children = (
 				F3BBBFA22C651E040073B6DF /* CalendarViewApp.swift */,
 				F3BBBFA42C651E040073B6DF /* ContentView.swift */,
+				F3BBBFCE2C6A9A980073B6DF /* DateWithRange.swift */,
+				F3BBBFD02C6A9EF40073B6DF /* CombinedCalendarView.swift */,
 				F3BBBFA62C651E060073B6DF /* Assets.xcassets */,
 				F3BBBFA82C651E060073B6DF /* Preview Content */,
+				F3BBBFD22C6BB54D0073B6DF /* OneCalendarView.swift */,
+				F3BBBFD82C6FEAFE0073B6DF /* MultiDatePIcker.swift */,
 			);
 			path = CalendarView;
 			sourceTree = "<group>";
@@ -258,7 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3BBBFA52C651E040073B6DF /* ContentView.swift in Sources */,
+				F3BBBFD92C6FEAFE0073B6DF /* MultiDatePIcker.swift in Sources */,
 				F3BBBFA32C651E040073B6DF /* CalendarViewApp.swift in Sources */,
+				F3BBBFCF2C6A9A980073B6DF /* DateWithRange.swift in Sources */,
+				F3BBBFD12C6A9EF40073B6DF /* CombinedCalendarView.swift in Sources */,
+				F3BBBFD32C6BB54D0073B6DF /* OneCalendarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

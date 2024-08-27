@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4F4B3B63-8E6F-4C1A-8293-8447191DABA4"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52CD63DC-0F6F-4B7B-B9C6-17CFDC3DAC03"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalendarView/DateWithRange.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC868101-CAFF-4F33-AB8D-39550187AC30"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalendarView/DateWithRange.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "CC868101-CAFF-4F33-AB8D-39550187AC30 - 96c05d04f47b8a14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalendarView.CalendarView2.updateUIView(_: __C.UICalendarView, context: SwiftUI.UIViewRepresentableContext&lt;CalendarView.CalendarView2&gt;) -&gt; ()"
+                  moduleName = "CalendarView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vamsikallepalli/Desktop/CalendarView/CalendarView/DateWithRange.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "716">
+               </Location>
+               <Location
+                  uuid = "CC868101-CAFF-4F33-AB8D-39550187AC30 - c892f81757ca9c23"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Date) -&gt; Foundation.DateComponents in CalendarView.CalendarView2.updateUIView(_: __C.UICalendarView, context: SwiftUI.UIViewRepresentableContext&lt;CalendarView.CalendarView2&gt;) -&gt; ()"
+                  moduleName = "CalendarView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vamsikallepalli/Desktop/CalendarView/CalendarView/DateWithRange.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C5C4C1F-2D63-4479-9DB7-B8114798A7CD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalendarView/DateWithRange.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "7C5C4C1F-2D63-4479-9DB7-B8114798A7CD - 96c05d04f47b8a88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalendarView.CalendarView2.updateUIView(_: __C.UICalendarView, context: SwiftUI.UIViewRepresentableContext&lt;CalendarView.CalendarView2&gt;) -&gt; ()"
+                  moduleName = "CalendarView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vamsikallepalli/Desktop/CalendarView/CalendarView/DateWithRange.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1112">
+               </Location>
+               <Location
+                  uuid = "7C5C4C1F-2D63-4479-9DB7-B8114798A7CD - 96c05d04f47b8a88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalendarView.CalendarView2.updateUIView(_: __C.UICalendarView, context: SwiftUI.UIViewRepresentableContext&lt;CalendarView.CalendarView2&gt;) -&gt; ()"
+                  moduleName = "CalendarView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vamsikallepalli/Desktop/CalendarView/CalendarView/DateWithRange.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1248">
+               </Location>
+               <Location
+                  uuid = "7C5C4C1F-2D63-4479-9DB7-B8114798A7CD - 96c05d04f47b8a88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalendarView.CalendarView2.updateUIView(_: __C.UICalendarView, context: SwiftUI.UIViewRepresentableContext&lt;CalendarView.CalendarView2&gt;) -&gt; ()"
+                  moduleName = "CalendarView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vamsikallepalli/Desktop/CalendarView/CalendarView/DateWithRange.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1396">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "32E566D9-ED29-45E5-B3DD-FE8C7EDB1E3C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalendarView/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "updateUIView(_:context:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

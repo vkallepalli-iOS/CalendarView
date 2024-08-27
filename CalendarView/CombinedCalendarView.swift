@@ -1,18 +1,25 @@
-//
-//  CombinedCalendarView.swift
-//  CalendarView
-//
-//  Created by Vamsi Kallepalli on 8/12/24.
-//
-
 import SwiftUI
 
-struct CombinedCalendarView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+struct ContentView3: View {
+    @State private var selectedSegment = 0
 
-#Preview {
-    CombinedCalendarView()
+    var body: some View {
+        VStack {
+            Picker("Select View", selection: $selectedSegment) {
+                Text("Multi-Date Select").tag(0)
+                Text("Date Range").tag(1)
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+            
+            
+            
+            if selectedSegment == 0 {
+                ContentView()
+            } else {
+                ContentView2()
+            }
+        }
+        .padding()
+    }
 }
